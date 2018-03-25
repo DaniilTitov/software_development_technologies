@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="{{ url_for('create_note') }}" method=post class=create>
+
+    <div class="container">
+        <div class="row centered mt mb">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h4>AUTHOR</h4>
+                <p><input type=text size=50 name=author></p>
+                <h4>NOTE</h4>
+                <p><textarea name=text rows=20 cols=60></textarea></p>
+                <br/>
+                <div class="button">
+                    <p><input type="submit" value=SAVE></p>
+                </div>
+            </div>
+        </div><! --/row -->
+	</div><! --/container -->
+
+    </form>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<div id="headerwrap">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+					<h4>HELLO PEOPLE, MY NAME IS</h4>
+					<h1>DANIIL TITOV</h1>
+					<h4>AND THIS IS THE THIRD AND FOURTH LABS OF SOFTWARE DEVELOPMENT TECHNOLOGIES</h4>
+				</div>
+			</div><! --/row -->
+	    </div> <!-- /container -->
+	</div><! --/headerwrap -->
+	
+	<section id="notes"></section>
+	<div class="container">
+		<div class="row centered mt mb">
+			{% for post in p %}
+			<div class="col-lg-8 col-lg-offset-2">
+				<h2><a href="{{url_for('note_details', note_id=post[2] )}}">{{post[0]}}</a></h2>
+				<p> {{post[1]}} <br/></p>
+			</div>
+			{% endfor %}
+		</div><! --/row -->
+	</div><! --/container -->
+
+{% endblock %}

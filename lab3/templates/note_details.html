@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row centered mt mb">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h4>AUTHOR</h4>
+                <p>{{ note[0] }}></p>
+                <h4>NOTE</h4>
+                <p>{{ note[1] }}</p>
+                <br/>
+                <div class="row centered">
+                    <div class="col-lg-6">
+                        <div class="button">
+                            <a href="{{url_for('rewrite', note_id=note[2])}}">Change</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="button">
+                          <a href="{{url_for('delete', note_id=note[2])}}">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><! --/row -->
+	</div><! --/container -->
+
+{% endblock %}
